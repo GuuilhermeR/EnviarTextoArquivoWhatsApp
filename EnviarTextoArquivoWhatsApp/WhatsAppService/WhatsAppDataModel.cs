@@ -4,13 +4,14 @@ using System.ComponentModel;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace EnviarTextoArquivoWhatsApp
 {
     public class WhatsAppDataModel
     {
-
+        [JsonPropertyName("messaging_product")]
         public string messaging_product{ get; set; }
 
         public string to { get; set; }
@@ -24,6 +25,15 @@ namespace EnviarTextoArquivoWhatsApp
         public  Text text { get; set; }
 
         public  Document document { get; set; }
+
+        [JsonPropertyName("file")]
+        public byte[] media { get; set; }
+    }
+
+    public class Media
+    {
+        public string file { get; set; }
+        public string messaging_product { get; set; }
     }
 
     public class Document
@@ -80,6 +90,11 @@ namespace EnviarTextoArquivoWhatsApp
         public List<Contact> contacts { get; set; }
 
         public List<Message> messages { get; set; }
+    }
+
+    public class Retorno
+    {
+        public string id { get; set; }
     }
 
 }
