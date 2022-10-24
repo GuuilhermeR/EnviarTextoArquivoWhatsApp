@@ -6,15 +6,29 @@ using System.Threading.Tasks;
 
 namespace EnviarTextoArquivoWhatsApp.WhatsAppService
 {
-    public class Key
+    public static class Key
     {
-
-        public string Token {
+        public static string Token {
             get
             {
-                return "EABZAEPpXTQN0BAGTNIbBLMCPcKuxNztiSZCghgCH9H94ADLfAavBDaS9WiqFCkTEL4wKqDOMSfJQBNKcKqJpJnlmn3SK8OdxLIGCv5g6F5IiTR31XAzglzLWz5YAWdLfc8M9w1UIT2qs5CWiOmttl0HDBwXgjRDSgx2TtmWcLMpZAmLUISkmfIFFZAQ89KuHDewQJxkpVQZDZD"
+                return "EABZAEPpXTQN0BAKfGDKifBSiftoqsoKOjMNWQWkDNMZAc1l67iQhwk7lejC5ZAawQiD3ChSPdPSOhrS4ccngD1nplifECuCBH7FuXgcZBDLizB8snnOGGfpjTASkZACKZAV2yJrn4VggOAYlZCVg3VqTcYfhO5m7Y2WM94D25KZBgvHLfoTfZBPqAfKqvst44eFAroXLnarBp9QZDZD";
             }
         }
 
+        public static string phoneNumberID
+        {
+            get
+            {
+                return "100837532833986";
+            }
+        }
+
+        public static string whatsAppBusinessID
+        {
+            get
+            {
+                return "106594762247211";
+            }
+        }
     }
 }

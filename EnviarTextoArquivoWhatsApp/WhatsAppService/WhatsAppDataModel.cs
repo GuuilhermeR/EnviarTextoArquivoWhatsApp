@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,10 +15,29 @@ namespace EnviarTextoArquivoWhatsApp
 
         public string to { get; set; }
 
+        public string recipient_type { get; set; }
+
         public string type { get; set; }
 
         public Template Template { get; set; }
 
+        public  Text text { get; set; }
+
+        public  Document document { get; set; }
+    }
+
+    public class Document
+    {        
+        public string id { get; set; }
+        public string caption { get; set; }
+        public string filename { get; set; }
+    }
+
+
+    public class Text
+    {
+        public Boolean preview_url { get; set; }
+        public string body { get; set; }
     }
 
     public class Language
